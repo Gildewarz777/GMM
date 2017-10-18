@@ -15,8 +15,8 @@ def get_MFCC(sr,audio):
     return features
 
 #path to training data
-source = "pygender\\train_data\\youtube\\female\\"
-# source = "pygender\\train_data\\youtube\\male\\"
+# source = "pygender\\train_data\\youtube\\female\\"
+source = "pygender\\train_data\\youtube\\male\\"
 
 #path to save trained model
 dest = "pygender\\"
