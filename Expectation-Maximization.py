@@ -43,15 +43,15 @@ class Gaussian:
 
 
     #probability density function
-    def pdf(self, datapoint):
+    def pdf(self, datapoint, i):
         "Probability of a data point given the current parameters"
-        u1 = (datapoint - self.mu1)
-        u2 = (datapoint - self.mu2)
-        y = ((1 / ((2 * pi) * pow(np.linalg.det(self.sigma1, 1/2))) * exp(-np.transpose(u1)/self.sigma1 * u1 / 2))+((1 / ((2 * pi) * pow(np.linalg.det(self.sigma2, 1/2))) * exp(-np.transpose(u2)/self.sigma2 * u2 / 2))
+        if(i == 1):
+            u = (datapoint - self.mu1)
+            y = ((1 / ((2 * pi) * pow(np.linalg.det(self.sigma1, 1 / 2))) * exp(-np.transpose(u) / self.sigma1 * u / 2))
+        else:
+            u = (datapoint - self.mu2)
+            y = ((1 / ((2 * pi) * pow(np.linalg.det(self.sigma2, 1 / 2))) * exp(-np.transpose(u) / self.sigma2 * u / 2))
         return y
-    #printing model values
-    def __repr__(self):
-        return 'Gaussian({0:4.6}, {1:4.6})'.format(self.mu, self.sigma)
 
 
 class GaussianMixture:
@@ -71,10 +71,10 @@ class GaussianMixture:
         "Perform an E(stimation)-step, freshening up self.loglike in the process"
         # compute weights
         self.loglike = 0.  # = log(p = 1)
-        for datum in self.data:
+        for datapoint in self.X_train:
             # unnormalized weights
-            wp1 = self.one.pdf(datum) * self.mix
-            wp2 = self.two.pdf(datum) * (1. - self.mix)
+            wp1 = self.one.pdf(datapoint, 1) * self.phi
+            wp2 = self.two.pdf(datapoint, 2) * (1. - self.phi)
             # compute denominator
             den = wp1 + wp2
             # normalize

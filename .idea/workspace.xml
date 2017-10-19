@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ee4a010e-9c44-4c55-aed8-b2a3ef7919d7" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Expectation-Maximization.py" afterPath="$PROJECT_DIR$/Expectation-Maximization.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -53,8 +52,8 @@
       <file leaf-file-name="Expectation-Maximization.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Expectation-Maximization.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="49" column="162" lean-forward="false" selection-start-line="49" selection-start-column="162" selection-end-line="49" selection-end-column="162" />
+            <state relative-caret-position="441">
+              <caret line="50" column="13" lean-forward="true" selection-start-line="50" selection-start-column="13" selection-end-line="50" selection-end-column="13" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -362,8 +361,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Expectation-Maximization.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="49" column="162" lean-forward="false" selection-start-line="49" selection-start-column="162" selection-end-line="49" selection-end-column="162" />
+        <state relative-caret-position="441">
+          <caret line="50" column="13" lean-forward="true" selection-start-line="50" selection-start-column="13" selection-end-line="50" selection-end-column="13" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
