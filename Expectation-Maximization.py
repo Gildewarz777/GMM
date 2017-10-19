@@ -45,12 +45,13 @@ class Gaussian:
     #probability density function
     def pdf(self, datapoint, i):
         "Probability of a data point given the current parameters"
-        if(i == 1):
+        if i == 1:
             u = (datapoint - self.mu1)
-            y = ((1 / ((2 * pi) * pow(np.linalg.det(self.sigma1, 1 / 2))) * exp(-np.transpose(u) / self.sigma1 * u / 2))
+            y = ((1 / ((2 * pi) * pow(np.linalg.det(self.sigma1, 1 / 2))) * exp(-np.transpose(u) / self.sigma1 * u / 2)))
         else:
             u = (datapoint - self.mu2)
-            y = ((1 / ((2 * pi) * pow(np.linalg.det(self.sigma2, 1 / 2))) * exp(-np.transpose(u) / self.sigma2 * u / 2))
+            y = ((1 / ((2 * pi) * pow(np.linalg.det(self.sigma2, 1 / 2))) * exp(-np.transpose(u) / self.sigma2 * u / 2)))
+
         return y
 
 
