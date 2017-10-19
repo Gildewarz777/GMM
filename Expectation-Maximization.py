@@ -27,11 +27,13 @@ sigma = np.stack((sigma, sigma), 2)
 phi = 0.5
 weights = np.zeros((len(X_train), 2))
 
+n_iterations = 2
+
 # training models and choosing the best one
 best_gmm = None
 best_loglike = float("-inf")
 
-for i in range(0, 3):
+for i in range(0, n_iterations):
     ##### E-step #####
     loglike = 0
     for i in range(0, len(X_train)):
@@ -70,7 +72,7 @@ colors = ['lightcoral', 'slateblue']
 color_iter = itertools.cycle(['red', 'blue', 'cornflowerblue', 'gold', 'darkorange'])
 labels = [colors[int(np.argmax(res))] for res in weights]
 
-print("\nLog-likelihood of the best GMM = " + str(loglike) + "\nPhi of the best GMM = " + str(phi))
+print("\nLog-likelihood of the best GMM = " + str(loglike) + "\nPhi of the best GMM = " + str(phi) + "\nMu of the best GMM = " + str(mu) + "\nSigma of the best GMM = " + str(sigma))
 
 
 predicted = np.array([int(np.argmax(weights[i])) for i in range(0, len(X_train))])
